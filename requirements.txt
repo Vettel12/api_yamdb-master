@@ -26,3 +26,5 @@ sqlparse           # via django
 urllib3           # via requests
 wcwidth           # via pytest
 zipp               # via importlib-metadata
+djangorestframework-simplejwt
+django-filter

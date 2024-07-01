@@ -39,6 +39,7 @@ class Test01UserAPI:
     @pytest.mark.django_db(transaction=True)
     def test_04_users_get_auth(self, user_client, admin):
         response = user_client.get('/api/v1/users/')
+        print(response.content.decode('utf-8'))
         assert response.status_code != 404, \
             'Страница `/api/v1/users/` не найдена, проверьте этот адрес в *urls.py*'
         assert response.status_code == 200, \
